@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center_horizontal"
+    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+    <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:id="@+id/status"
+                android:layout_gravity="center_horizontal"
+                android:text="Not Configured"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="To sign in requires the email and password you use to login to the Souk. Once you enter credentials, the app will sign you in when your phone connects to the wifi network."
+                android:layout_height="wrap_content" />
+            <EditText android:id="@+id/email" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Lakeside Email"
+                android:inputType="textEmailAddress" android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText android:id="@+id/password" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="Password" android:inputType="textPassword"
+                android:maxLines="1" android:singleLine="true" />
+
+            <Button android:id="@+id/save_credentials" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="Save Credentials"
+                android:textStyle="bold" />
+            <Button android:id="@+id/force_sign_in" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:text="Sign In Now"
+                android:textStyle="bold" />
+            <Button android:id="@+id/update_info" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Update Log and Status Information"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/log"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
