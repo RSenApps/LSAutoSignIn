@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
                    startService(new Intent(MainActivity.this, SignInService.class));
                }
                else {
-                   Toast.makeText(MainActivity.this, "Not connected to erehwon...", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, "Not connected to wifi...", Toast.LENGTH_SHORT).show();
                }
            }
        });
@@ -145,7 +145,7 @@ public class MainActivity extends Activity {
         }
         else if (!isConnectedToWifi())
         {
-            status.setText("Not connected to erehwon");
+            status.setText("Not connected to wifi");
         }
         else {
             status.setText("Not signed in yet...");
@@ -158,7 +158,7 @@ public class MainActivity extends Activity {
         NetworkInfo.DetailedState state = WifiInfo.getDetailedStateOf(wifiInfo.getSupplicantState());
         if (state == NetworkInfo.DetailedState.CONNECTED || state == NetworkInfo.DetailedState.OBTAINING_IPADDR) {
             String ssid = wifiInfo.getSSID();
-            if (ssid.contains("erehwon"))
+            if (ssid.contains("erehwon") || ssid.toLowerCase().contains("us student"))
             {
                 return true;
             }

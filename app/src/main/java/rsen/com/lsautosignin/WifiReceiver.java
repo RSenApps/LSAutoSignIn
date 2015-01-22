@@ -30,7 +30,7 @@ public class WifiReceiver extends BroadcastReceiver {
                     WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
                     WifiInfo wifiInfo = wifiManager.getConnectionInfo();
                     String ssid = wifiInfo.getSSID();
-                    if (ssid.contains("erehwon")) {
+                    if (ssid.contains("erehwon") || ssid.toLowerCase().contains("us student")) {
                         context.startService(new Intent(context, SignInService.class));
                         connected = true;
                     }
